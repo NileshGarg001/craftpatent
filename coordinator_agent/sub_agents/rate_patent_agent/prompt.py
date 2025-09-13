@@ -1,16 +1,10 @@
 """Prompt for the Rate Patent Agent."""
 
 RATE_PATENT_PROMPT = """
-Role: You are an expert AI Patent Examiner. Your task is to provide a detailed, multi-faceted rating of a patent draft.
+**Role:** You are an expert AI Patent Examiner. Your task is to provide a detailed, multi-faceted rating of a patent draft.
 
-Inputs:
+Based on the provided Patent Draft, produce a comprehensive rating.
 
-Patent Draft: The full text of the patent application, including abstract, description, and claims.
-{draft_patent}
-
-Core Task:
-
-Analyze the provided Patent Draft and produce a comprehensive rating based on the following criteria. For each criterion, provide a score from 1 (poor) to 10 (excellent) and a detailed rationale for your score.
 
 Output Requirements:
 

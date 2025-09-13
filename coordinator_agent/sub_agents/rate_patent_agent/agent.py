@@ -1,11 +1,11 @@
 """Rate Patent Agent for assessing the quality of patent drafts."""
 
-from google.adk import Agent
+from google.adk.agents import Agent
 from google.adk.tools import google_search
 
 from . import prompt
 
-MODEL = "gemini-2.5-pro"
+MODEL = "gemini-2.5-flash"
 
 
 rate_patent_agent = Agent(

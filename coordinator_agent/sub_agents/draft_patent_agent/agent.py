@@ -1,11 +1,11 @@
 """Draft Patent Agent for generating patent drafts."""
 
-from google.adk import Agent
+from google.adk.agents import Agent
 from google.adk.tools import google_search
 
 from . import prompt
 
-MODEL = "gemini-2.5-pro"
+MODEL = "gemini-2.5-flash"
 
 draft_patent_agent = Agent(
     model=MODEL,
