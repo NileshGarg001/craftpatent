@@ -3,7 +3,7 @@ from google.adk.tools.agent_tool import AgentTool
 
 
 from .prompt import RATING_AGENT_INSTRUCTION
-from .sub_agents.academic_newresearch import academic_newresearch_agent
+from .sub_agents.draft_patent_agent import draft_patent_agent
 from .sub_agents.academic_websearch import academic_websearch_agent
 
 MODEL = "gemini-2.5-flash"
