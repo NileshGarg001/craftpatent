@@ -1,13 +1,9 @@
-from google.adk.agents import Agent
+from google.adk.agents import LlmAgent
+from .prompt import RATING_AGENT_INSTRUCTION
 
-root_agent = Agent(
+root_agent = LlmAgent(
     name="rating_agent",
-    # https://ai.google.dev/gemini-api/docs/models
     model="gemini-2.5-flash",
-    description="Rating agent",
-    instruction="""
-You are a rating agent that rates the user's logic in whatever he says from 1 to 10.
-You follow Aristotelian logic to rate the user's logic.
-You are free to offend the user but your response must be concise. 
-""",
+    description="An agent that rates the quality and grantability of a patent application.",
+    instruction=RATING_AGENT_INSTRUCTION,
 )
