@@ -1,0 +1,50 @@
+INVENTION DISCLOSURE
+
+Title: Biodegradable Food Packaging from Agricultural Waste
+
+Inventor: Lisa Park
+Date: September 13, 2025
+
+FIELD OF THE INVENTION
+This invention relates to sustainable packaging materials, specifically biodegradable food containers made from agricultural waste fibers.
+
+BACKGROUND OF THE INVENTION
+Plastic food packaging creates environmental waste and takes centuries to decompose. Current biodegradable alternatives like PLA are expensive and compete with food crops. Agricultural waste is typically burned or discarded, creating pollution.
+
+SUMMARY OF THE INVENTION
+The invention converts agricultural waste (rice husks, wheat straw, corn stalks) into strong, waterproof food packaging through a novel fiber treatment and molding process that creates containers degrading completely within 90 days.
+
+DETAILED DESCRIPTION
+
+1. RAW MATERIAL PROCESSING
+- Agricultural waste collected within 50-mile radius of processing facilities
+- Mechanical shredding creates uniform 2-5mm fiber length
+- Alkaline treatment removes lignin and improves fiber bonding
+- Natural wax coating from agricultural sources provides water resistance
+
+2. MANUFACTURING PROCESS
+- Fiber-pulp mixture formed in heated molds at 180°C
+- Compression molding creates various container shapes and sizes
+- Bio-based adhesive from plant proteins bonds fibers permanently
+- Quality control ensures food-safe surface finish
+
+3. PRODUCT CHARACTERISTICS
+- Tensile strength: 25 MPa (comparable to cardboard)
+- Water resistance: 24 hours without degradation
+- Biodegrades completely in 90 days in commercial composting
+- Cost: 30% less than traditional biodegradable packaging
+
+NOVELTY AND TECHNICAL ADVANTAGES
+1. First use of local agricultural waste for food packaging
+2. Eliminates waste disposal costs for farmers
+3. Carbon-negative production through waste utilization
+4. Creates rural economic opportunities
+
+INDUSTRIAL APPLICABILITY
+Target markets include food service companies, grocery stores, and takeout restaurants. Applications for hot and cold food containers, plates, and bowls.
+
+COMPARISON TO PRIOR ART
+Unlike existing biodegradable packaging:
+- Uses waste materials vs food crops (PLA from corn)
+- Lower cost vs petroleum-based alternatives
+- Local sourcing vs imported materials

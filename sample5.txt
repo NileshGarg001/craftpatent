@@ -1,0 +1,50 @@
+INVENTION DISCLOSURE
+
+Title: Modular Vertical Farm Pod System
+
+Inventor: Sarah Thompson  
+Date: September 13, 2025
+
+FIELD OF THE INVENTION
+This invention relates to agricultural systems, specifically modular vertical farming structures for urban food production.
+
+BACKGROUND OF THE INVENTION
+Urban agriculture faces space constraints and high setup costs. Current vertical farms are expensive, fixed installations requiring specialized buildings. Small-scale solutions lack efficiency while large systems are inaccessible to most farmers.
+
+SUMMARY OF THE INVENTION
+The invention provides stackable farming pods that can be deployed in parking lots, rooftops, or warehouses. Each pod is self-contained with hydroponics, LED lighting, and climate control, allowing modular expansion based on demand.
+
+DETAILED DESCRIPTION
+
+1. POD STRUCTURE
+- 8' x 8' x 10' aluminum frame modules weighing 500 lbs each
+- Stackable up to 6 high using integrated locking mechanisms
+- Weather-resistant polycarbonate panels with R-8 insulation
+- Built-in water collection and recycling system
+
+2. GROWING SYSTEM
+- 96 plant sites per pod using NFT (Nutrient Film Technique)
+- Full spectrum LED arrays consuming 400W per pod
+- Automated nutrient dosing with pH and EC monitoring
+- Vertical growing towers maximize space utilization
+
+3. CONTROL SYSTEM
+- IoT sensors monitor temperature, humidity, CO2, light levels
+- Mobile app allows remote monitoring and control
+- Automated harvesting alerts based on plant growth data
+- Solar panel integration reduces grid electricity by 60%
+
+NOVELTY AND TECHNICAL ADVANTAGES
+- First truly modular vertical farm system deployable anywhere
+- 40x higher yield per square foot than traditional farming
+- $5,000 per pod cost vs $500,000 for fixed vertical farms
+- Payback period of 18 months through premium crop pricing
+
+INDUSTRIAL APPLICABILITY
+Target customers include urban farmers, restaurants seeking local sourcing, and food service companies. Suitable for leafy greens, herbs, and small fruit production.
+
+COMPARISON TO PRIOR ART
+Unlike existing vertical farms:
+- Modular vs fixed installation
+- Portable vs permanent structure  
+- Low cost vs high capital investment

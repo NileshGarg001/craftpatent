@@ -1,0 +1,50 @@
+INVENTION DISCLOSURE
+
+Title: Self-Folding Laundry Robot with Fabric Recognition
+
+Inventor: David Chen
+Date: September 13, 2025
+
+FIELD OF THE INVENTION
+This invention relates to household robotics, specifically automated laundry folding systems using computer vision and robotic manipulation.
+
+BACKGROUND OF THE INVENTION
+Folding laundry is time-consuming and repetitive. Existing laundry robots are limited to simple items and cannot handle diverse fabric types, sizes, or wrinkled clothing. Current systems require pre-sorting and fail with complex garments.
+
+SUMMARY OF THE INVENTION
+The invention provides a robotic system that identifies clothing types using computer vision, handles wrinkled fabrics with steam preprocessing, and folds items using adaptive manipulation algorithms based on garment geometry.
+
+DETAILED DESCRIPTION
+
+1. VISION SYSTEM
+- 4K RGB-D cameras capture clothing from multiple angles
+- CNN-based fabric classification (cotton, polyester, silk, denim, etc.)
+- Wrinkle detection algorithm using texture analysis
+- Size estimation through 3D point cloud processing
+
+2. MANIPULATION SYSTEM  
+- Dual-arm robot with 7 DOF per arm for complex movements
+- Soft gripper fingers adapt to fabric thickness and texture
+- Force feedback prevents tearing delicate materials
+- Steam jets integrated in work surface for wrinkle removal
+
+3. FOLDING ALGORITHMS
+- Garment-specific folding patterns for shirts, pants, towels, sheets
+- Adaptive folding based on fabric stiffness and size variations
+- Edge detection and corner identification for precise alignment
+- Quality assessment ensures consistent fold geometry
+
+NOVELTY AND TECHNICAL ADVANTAGES
+1. First robot to handle wrinkled and diverse fabric types automatically
+2. 85% success rate across 20+ garment categories
+3. 3 minutes average folding time per item vs 30 seconds manual
+4. Integrated steam system eliminates need for pre-processing
+
+INDUSTRIAL APPLICABILITY
+Target markets include residential consumers, commercial laundromats, and hotel housekeeping services. Estimated market: $2B household robotics segment.
+
+COMPARISON TO PRIOR ART
+Unlike existing folding robots (FoldiMate, Laundroid):
+- Handles wrinkled fabrics vs only smooth items
+- No pre-sorting required vs manual categorization
+- Adapts to garment variations vs fixed size requirements
