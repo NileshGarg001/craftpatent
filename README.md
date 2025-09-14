@@ -48,13 +48,16 @@ Invention Disclosure → Draft → Rate → Improve → Rate → ... → Final P
 ## File Structure
 
 ```
-coordinator_agent/
-├── __init__.py          # Package initialization
-├── agent.py             # Main LoopAgent and sub-agents definition
-├── prompts.py           # All agent prompts consolidated
-venv/                    # Python virtual environment
-sample1.txt - sample9.txt # Test invention disclosures
-requirements.txt         # Python dependencies
+craftpatent/
+├── coordinator_agent/           # Multi-agent system
+│   ├── __init__.py             # Package initialization
+│   ├── agent.py                # Main LoopAgent and sub-agents
+│   └── prompts.py              # All agent prompts
+├── sample1.txt - sample9.txt   # Test invention disclosures
+├── requirements.txt            # Python dependencies
+├── Dockerfile                  # Container configuration
+├── cloudbuild.yaml            # CI/CD pipeline
+└── .dockerignore              # Docker build exclusions
 ```
 
 ## Setup & Installation
