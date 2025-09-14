@@ -1,7 +1,7 @@
 from google.adk.agents import LoopAgent, Agent
 from google.adk.tools import google_search
 
-from .prompts import DRAFT_PATENT_PROMPT, RATE_PATENT_PROMPT
+from coordinator_agent.prompts import DRAFT_PATENT_PROMPT, RATE_PATENT_PROMPT
 
 MODEL = "gemini-2.5-flash"
 

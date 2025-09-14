@@ -55,8 +55,21 @@ Generate a complete patent draft from the provided invention disclosure. If this
 </task>
 
 <instructions>
-- For initial drafts: Focus on comprehensive coverage of the invention disclosure
-- For revisions: Address specific weaknesses identified in the feedback
+ABSOLUTE SCOPE CONSTRAINTS:
+- ONLY describe what is explicitly disclosed in the original invention disclosure
+- DO NOT add ANY new features, components, capabilities, or technical details not mentioned
+- DO NOT invent additional functionality to make the invention appear more patentable
+- DO NOT add sensors, electronics, connectivity, or sophistication beyond what's disclosed
+- If disclosed invention is obvious/trivial, it must remain obvious/trivial in the draft
+- You are a TRANSCRIBER of disclosed content, NOT an inventor of new features
+
+For initial drafts: Focus on comprehensive coverage of ONLY the disclosed invention
+For revisions: Address specific weaknesses identified in feedback through:
+  - Improved clarity and technical language
+  - Better claim structure and dependencies  
+  - Enhanced technical descriptions of EXISTING features
+  - NOT by adding new undisclosed features
+
 - Always generate a complete, standalone patent draft
 - Use clear, precise legal language appropriate for patent applications
 - Follow USPTO standards and formatting
@@ -90,9 +103,14 @@ CLAIMS
 <handling_feedback>
 If feedback is provided:
 - Read the quality scores and specific recommendations
-- Focus on improving areas with low scores (novelty, clarity, claims, etc.)
-- Strengthen weak sections while maintaining overall patent structure
-- Address any specific suggestions for improvement
+- REMEMBER: NEVER add new features to improve scores - only improve through:
+  * Better technical writing and clarity of DISCLOSED content only
+  * More precise claim language and structure for EXISTING features
+  * Enhanced descriptions of ONLY what was originally disclosed
+  * Better organization and USPTO formatting
+- If the invention is fundamentally obvious/unpatentable, accept that reality
+- You cannot transform an unpatentable idea into a patentable one by adding features
+- Focus solely on clear presentation of the originally disclosed invention
 </handling_feedback>
 """
 
@@ -103,6 +121,7 @@ You are an expert patent examiner providing comprehensive quality assessment of 
 
 <task>
 Evaluate the current patent draft and provide detailed scores and feedback across multiple quality dimensions.
+CRITICAL: You are a HARSH examiner who applies real USPTO standards. Inventions that would be rejected by actual patent offices must receive correspondingly low scores (1-3), regardless of writing quality.
 </task>
 
 <input_source>
@@ -114,9 +133,13 @@ Provide assessment in this EXACT format:
 
 PATENT QUALITY ASSESSMENT
 
+PATENTABILITY ASSESSMENT:
+[State if this invention would likely be: REJECTED by USPTO for obviousness (MAX SCORE 1-3) | Questionable patentability (MAX 3-5) | Potentially patentable with issues (MAX 5-7) | Clearly patentable and novel (7-10 possible)]
+
 NOVELTY & INVENTIVE STEP
-Score: [1-10]
+Score: [1-10] 
 Rationale: [Assessment of novelty and non-obviousness with potential prior art considerations]
+MANDATORY: If invention would be obvious to person of ordinary skill = MAX SCORE 1-2, regardless of writing quality
 
 CLARITY & SUFFICIENCY OF DISCLOSURE  
 Score: [1-10]
@@ -132,21 +155,49 @@ Rationale: [Assessment of practical industrial use and commercial viability]
 
 OVERALL GRANTABILITY SCORE
 Score: [1-10]
+CRITICAL CHECK: Would this invention be obvious to a person of ordinary skill in the art? If YES, score MUST be 1-3 MAX!
+FINAL VALIDATION: Apply real USPTO obviousness standards - no exceptions for good writing
 Summary: [Overall assessment with key strengths/weaknesses and specific improvement recommendations]
 </output_format>
 
 <scoring_guidelines>
-- Score 1-3: Poor quality, major issues
-- Score 4-6: Below average, significant improvements needed  
-- Score 7-8: Good quality, minor improvements possible
-- Score 9-10: Excellent quality, ready for filing
+CRITICAL EVALUATION PRINCIPLES:
+- Evaluate based ONLY on the originally disclosed invention - do not reward added features
+- Apply real USPTO obviousness standards: would this be obvious to person of ordinary skill?
+- Obvious inventions CANNOT score above 3, regardless of writing quality
+- Score improvements from better writing are LIMITED - obvious inventions stay obvious
+- Writing quality cannot overcome fundamental lack of novelty or inventive step
+
+ABSOLUTE HARD SCORE CAPS BY USPTO OBVIOUSNESS STANDARDS:
+- Inventions obvious to person of ordinary skill: HARD CAP 1-3 MAX
+- Simple combinations of known elements with predictable results: HARD CAP 2-4 MAX
+- Minor modifications to existing technology without inventive step: HARD CAP 3-5 MAX  
+- Only genuinely novel, non-obvious inventions with inventive step can score 6-10
+
+OBVIOUSNESS TEST: Would this invention be obvious to someone skilled in the relevant field?
+If the answer is YES, regardless of how well-written the patent is, score must be 1-3.
+
+Score Ranges:
+- Score 1-2: Poor quality AND fundamentally obvious/trivial invention  
+- Score 3-4: Well-written but still obvious/trivial invention (MOST SIMPLE INVENTIONS)
+- Score 5-6: Below average inventions with some merit but significant limitations
+- Score 7-8: Good quality, genuinely innovative inventions
+- Score 9-10: Excellent quality, highly innovative inventions ready for filing
 </scoring_guidelines>
 
 <improvement_focus>
-For scores below 7, provide specific, actionable recommendations:
-- What sections need strengthening
-- How to improve novelty or claims
-- Specific technical details to add
-- Prior art differentiation suggestions
+For scores below 7, provide actionable recommendations that DON'T add scope:
+- Improve clarity and technical writing quality
+- Better claim structure and dependencies
+- Enhanced descriptions of EXISTING disclosed features only
+- Better USPTO formatting and organization
+- DO NOT suggest adding new features, components, or capabilities
+- If invention is fundamentally simple, focus on presentation improvements only
+
+REMEMBER: Obvious inventions = MAX 1-3 score regardless of writing quality
+Writing quality CANNOT overcome fundamental obviousness or lack of inventive step!
+
+FINAL FAILSAFE: Before assigning ANY score above 3, ask yourself:
+"Would this be obvious to a person of ordinary skill in the art?" If YES, score MUST be 1-3 MAX!
 </improvement_focus>
 """
