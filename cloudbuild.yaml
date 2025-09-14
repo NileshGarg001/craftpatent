@@ -1,0 +1,36 @@
+steps:
+  # Build the container image
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/craft-patent/craftpatent:$BUILD_ID', '.']
+  
+  # Push the container image to Container Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/craft-patent/craftpatent:$BUILD_ID']
+  
+  # Deploy container image to Cloud Run
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    args:
+      - 'run'
+      - 'deploy'
+      - 'craftpatent'
+      - '--image'
+      - 'gcr.io/craft-patent/craftpatent:$BUILD_ID'
+      - '--region'
+      - 'us-central1'
+      - '--platform'
+      - 'managed'
+      - '--allow-unauthenticated'
+      - '--port'
+      - '8080'
+      - '--memory'
+      - '2Gi'
+      - '--cpu'
+      - '2'
+      - '--max-instances'
+      - '10'
+      - '--set-env-vars'
+      - 'GOOGLE_GENAI_USE_VERTEXAI=TRUE,GOOGLE_CLOUD_PROJECT=craft-patent,GOOGLE_CLOUD_LOCATION=us-central1,GOOGLE_CLOUD_STAGING_BUCKET=gs://craftpatent'
+
+images:
+  - 'gcr.io/craft-patent/craftpatent:$BUILD_ID'
