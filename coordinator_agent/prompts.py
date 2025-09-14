@@ -129,60 +129,77 @@ CRITICAL: Always evaluate the current_draft from the coordinator. This ensures y
 </input_source>
 
 <output_format>
-Provide assessment in this EXACT format:
+Provide assessment in this EXACT JSON format:
 
-PATENT QUALITY ASSESSMENT
+```json
+{
+  "patentability_assessment": "[State if this invention would likely be: REJECTED by USPTO for obviousness (MAX SCORE 1-4) | Minor improvement with some merit (MAX 4-7) | Genuinely novel and patentable (MAX 6-10) | Highly innovative breakthrough (7-10 possible)]",
+  "novelty_score": X,
+  "novelty_rationale": "[Assessment of novelty and non-obviousness with potential prior art considerations]",
+  "clarity_score": X,
+  "clarity_rationale": "[Evaluation of clarity and completeness enabling reproduction]",
+  "claims_score": X,
+  "claims_rationale": "[Analysis of claim quality, scope appropriateness, and logical structure]",
+  "industrial_applicability_score": X,
+  "industrial_applicability_rationale": "[Assessment of practical industrial use and commercial viability]",
+  "overall_score": X,
+  "overall_summary": "[Overall assessment with key strengths/weaknesses]",
+  "suggestions": [
+    "[Specific actionable improvement recommendation 1]",
+    "[Specific actionable improvement recommendation 2]", 
+    "[Specific actionable improvement recommendation 3]"
+  ]
+}
+```
 
-PATENTABILITY ASSESSMENT:
-[State if this invention would likely be: REJECTED by USPTO for obviousness (MAX SCORE 1-3) | Questionable patentability (MAX 3-5) | Potentially patentable with issues (MAX 5-7) | Clearly patentable and novel (7-10 possible)]
-
-NOVELTY & INVENTIVE STEP
-Score: [1-10] 
-Rationale: [Assessment of novelty and non-obviousness with potential prior art considerations]
-MANDATORY: If invention would be obvious to person of ordinary skill = MAX SCORE 1-2, regardless of writing quality
-
-CLARITY & SUFFICIENCY OF DISCLOSURE  
-Score: [1-10]
-Rationale: [Evaluation of clarity and completeness enabling reproduction]
-
-CLAIM CONSTRUCTION & SCOPE
-Score: [1-10]
-Rationale: [Analysis of claim quality, scope appropriateness, and logical structure]
-
-INDUSTRIAL APPLICABILITY
-Score: [1-10]
-Rationale: [Assessment of practical industrial use and commercial viability]
-
-OVERALL GRANTABILITY SCORE
-Score: [1-10]
-CRITICAL CHECK: Would this invention be obvious to a person of ordinary skill in the art? If YES, score MUST be 1-3 MAX!
-FINAL VALIDATION: Apply real USPTO obviousness standards - no exceptions for good writing
-Summary: [Overall assessment with key strengths/weaknesses and specific improvement recommendations]
+CRITICAL SCORING CONSTRAINTS:
+- If invention would be obvious to person of ordinary skill = novelty_score MAX 1-3, overall_score MAX 1-4
+- Apply real USPTO obviousness standards - no exceptions for good writing
+- Suggestions must NOT add new features, only improve presentation of disclosed content
 </output_format>
 
 <scoring_guidelines>
 CRITICAL EVALUATION PRINCIPLES:
 - Evaluate based ONLY on the originally disclosed invention - do not reward added features
 - Apply real USPTO obviousness standards: would this be obvious to person of ordinary skill?
-- Obvious inventions CANNOT score above 3, regardless of writing quality
-- Score improvements from better writing are LIMITED - obvious inventions stay obvious
-- Writing quality cannot overcome fundamental lack of novelty or inventive step
+- DISTINGUISH between invention quality vs presentation quality:
+  * Obvious inventions: Hard cap 1-3 regardless of writing quality
+  * Good inventions poorly presented: Can improve significantly through better drafting
+  * Genuinely novel inventions: Full score range available based on presentation quality
+- Writing quality CAN improve scores for non-obvious inventions through better clarity, claims structure, and technical descriptions
 
-ABSOLUTE HARD SCORE CAPS BY USPTO OBVIOUSNESS STANDARDS:
-- Inventions obvious to person of ordinary skill: HARD CAP 1-3 MAX
-- Simple combinations of known elements with predictable results: HARD CAP 2-4 MAX
-- Minor modifications to existing technology without inventive step: HARD CAP 3-5 MAX  
-- Only genuinely novel, non-obvious inventions with inventive step can score 6-10
+SCORE CAPS BASED ON INVENTION MERIT (NOT PRESENTATION):
+- Inventions obvious to person of ordinary skill: HARD CAP 1-4 MAX (e.g., basic timers, email, simple reminders)
+- Simple combinations of known elements with predictable results: HARD CAP 4-6 MAX
+- Minor improvements to existing technology with some inventive step: HARD CAP 5-8 MAX  
+- Genuinely novel, non-obvious inventions with clear technical advancement: FULL RANGE 6-10 (can improve significantly with better drafting)
 
-OBVIOUSNESS TEST: Would this invention be obvious to someone skilled in the relevant field?
-If the answer is YES, regardless of how well-written the patent is, score must be 1-3.
+SCORING APPROACH:
+1. First assess invention merit: Is this obvious? Minor improvement? Genuinely novel?
+2. Then assess presentation quality within the merit-based cap
+3. Good inventions poorly presented should get substantial score boosts through better drafting
+4. Obvious inventions stay capped regardless of presentation quality
 
-Score Ranges:
-- Score 1-2: Poor quality AND fundamentally obvious/trivial invention  
-- Score 3-4: Well-written but still obvious/trivial invention (MOST SIMPLE INVENTIONS)
-- Score 5-6: Below average inventions with some merit but significant limitations
-- Score 7-8: Good quality, genuinely innovative inventions
-- Score 9-10: Excellent quality, highly innovative inventions ready for filing
+Score Ranges by Invention Merit:
+OBVIOUS INVENTIONS (Hard Cap 1-4):
+- Score 1-2: Obvious invention (e.g., basic timers, email, simple reminders)
+- Score 3-4: Obvious invention, well presented but still limited patentability
+
+MINOR IMPROVEMENTS (Cap 4-7):  
+- Score 4-5: Minor improvement, poorly presented
+- Score 6-7: Minor improvement, well presented
+
+GENUINELY NOVEL INVENTIONS (Full Range 6-10):
+- Score 6-7: Novel invention, poorly presented (significant room for improvement)
+- Score 7-8: Novel invention, adequately presented  
+- Score 8-9: Novel invention, well presented
+- Score 10: Novel invention, perfectly presented and ready for filing
+
+EXAMPLES OF GENUINELY NOVEL (6-10 range):
+- Advanced robotics with novel algorithms (laundry folding robot)
+- AI/ML innovations with technical advancement
+- Medical devices with novel mechanisms (predictive insulin systems)
+- New materials or manufacturing processes
 </scoring_guidelines>
 
 <improvement_focus>
@@ -194,10 +211,20 @@ For scores below 7, provide actionable recommendations that DON'T add scope:
 - DO NOT suggest adding new features, components, or capabilities
 - If invention is fundamentally simple, focus on presentation improvements only
 
-REMEMBER: Obvious inventions = MAX 1-3 score regardless of writing quality
-Writing quality CANNOT overcome fundamental obviousness or lack of inventive step!
+REMEMBER: 
+- Obvious inventions = MAX 1-3 score regardless of writing quality
+- Novel inventions = Can improve significantly (4-10 range) through better presentation
+- Writing quality CANNOT overcome fundamental obviousness, BUT CAN significantly boost genuinely novel inventions
 
-FINAL FAILSAFE: Before assigning ANY score above 3, ask yourself:
-"Would this be obvious to a person of ordinary skill in the art?" If YES, score MUST be 1-3 MAX!
+FINAL FAILSAFE: Before assigning scores, ask:
+1. "Would this be obvious to a person of ordinary skill in the art?" 
+   - If YES: Hard cap 1-3 MAX (basic timers, email, simple devices)
+   - If NO: Full improvement potential 5-10 based on presentation quality
+
+SPECIFIC GUIDANCE:
+- Advanced robotics with novel algorithms = START at 6-7, can improve to 8-10
+- AI/ML systems with technical innovation = START at 6-8, can improve to 9-10  
+- Medical devices with novel mechanisms = START at 6-7, can improve to 8-10
+- Complex systems solving real problems in novel ways = START at 6-7 minimum
 </improvement_focus>
 """

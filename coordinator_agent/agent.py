@@ -28,7 +28,7 @@ rate_patent_agent = Agent(
 coordinator_agent = LoopAgent(
     name="coordinator_agent",
     description="A coordinator agent that manages the iterative patent creation process.",
-    max_iterations=5,
+    max_iterations=3,
     sub_agents=[
         draft_patent_agent,
         rate_patent_agent
