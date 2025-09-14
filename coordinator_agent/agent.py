@@ -1,21 +1,37 @@
-from google.adk.agents import LlmAgent
-from google.adk.tools import AgentTool
+from google.adk.agents import LoopAgent, Agent
+from google.adk.tools import google_search
 
-from .prompt import COORDINATOR_AGENT_INSTRUCTION
-from .sub_agents.draft_patent_agent import draft_patent_agent
-from .sub_agents.rate_patent_agent import rate_patent_agent
+from .prompts import DRAFT_PATENT_PROMPT, RATE_PATENT_PROMPT
 
 MODEL = "gemini-2.5-flash"
 
-coordinator_agent = LlmAgent(
-    name="coordinator_agent",
+# Draft Patent Agent
+draft_patent_agent = Agent(
     model=MODEL,
-    description="A coordinator agent that manages the patent creation process.",
-    instruction=COORDINATOR_AGENT_INSTRUCTION,
-    output_key="final_patent",
-    tools=[
-        AgentTool(agent=draft_patent_agent),
-        AgentTool(agent=rate_patent_agent),
+    name="draft_patent_agent",
+    instruction=DRAFT_PATENT_PROMPT,
+    tools=[google_search],
+    output_key="current_draft",
+)
+
+# Rate Patent Agent  
+rate_patent_agent = Agent(
+    model=MODEL,
+    name="rate_patent_agent",
+    instruction=RATE_PATENT_PROMPT,
+    output_key="current_rating",
+    tools=[google_search],
+)
+
+
+# Coordinator LoopAgent
+coordinator_agent = LoopAgent(
+    name="coordinator_agent",
+    description="A coordinator agent that manages the iterative patent creation process.",
+    max_iterations=5,
+    sub_agents=[
+        draft_patent_agent,
+        rate_patent_agent
     ],
 )
 

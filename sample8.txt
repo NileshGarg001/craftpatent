@@ -1,0 +1,48 @@
+INVENTION DISCLOSURE
+
+Title: Method for Using Email to Communicate
+
+Inventor: John Doe  
+Date: September 13, 2025
+
+FIELD OF THE INVENTION
+This invention relates to computer communications, specifically sending messages electronically between users.
+
+BACKGROUND OF THE INVENTION
+People need to communicate with each other. Currently they use phones and letters. This is slow and inefficient.
+
+SUMMARY OF THE INVENTION
+The invention provides a method for sending electronic messages over computer networks. Users can type messages and send them to other users instantly.
+
+DETAILED DESCRIPTION
+
+1. USER INTERFACE
+- The user opens a computer program
+- They type a message in a text box
+- They enter the recipient's address
+- They click "send"
+
+2. MESSAGE TRANSMISSION
+- The computer sends the message through the internet
+- The message goes to the recipient's computer
+- The recipient can read the message
+
+3. SYSTEM REQUIREMENTS
+- A computer with internet connection
+- Software program for sending messages
+- An email address for each user
+
+NOVELTY AND TECHNICAL ADVANTAGES
+1. Faster than regular mail
+2. Can send messages to multiple people
+3. No need for stamps or envelopes
+4. Messages are stored electronically
+5. Can include attachments like pictures
+
+COMMERCIAL APPLICATIONS
+- Business communications
+- Personal messaging
+- Marketing campaigns
+- Document sharing
+
+This invention would revolutionize how people communicate and make the world more connected.

@@ -1,0 +1,52 @@
+INVENTION DISCLOSURE
+
+Title: Automatic Water Drinking Reminder System
+
+Inventor: Jane Smith
+Date: September 13, 2025
+
+FIELD OF THE INVENTION
+Health and wellness devices for reminding people to drink water.
+
+BACKGROUND OF THE INVENTION
+People forget to drink water during the day. This causes dehydration. Some people set alarms on their phones but this doesn't work very well.
+
+SUMMARY OF THE INVENTION
+A simple device that beeps every hour to remind you to drink water. The device has a timer and a speaker.
+
+DETAILED DESCRIPTION
+
+1. THE DEVICE
+- Small plastic box (about 2 inches square)
+- Has one button on top
+- Makes a beeping sound
+- Runs on batteries
+
+2. HOW IT WORKS
+- User presses the button to start
+- Device beeps every 60 minutes
+- User hears the beep and drinks water
+- Cycle repeats throughout the day
+
+3. ADDITIONAL FEATURES
+- LED light flashes when beeping
+- Volume control (3 settings: low, medium, high)
+- Can be clipped to shirt or bag
+- Waterproof design
+
+TECHNICAL SPECIFICATIONS
+- Uses standard AA battery
+- Sound frequency: 1000 Hz
+- Operating temperature: 32-100°F
+- Weight: 2 ounces
+- Made of durable ABS plastic
+
+ADVANTAGES
+1. Helps people stay hydrated
+2. Simple to use - just one button
+3. Portable and lightweight  
+4. Affordable to manufacture
+5. Long battery life (6 months)
+6. Can prevent health problems from dehydration
+
+This invention solves the important problem of people not drinking enough water by providing regular audible reminders.
